@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Database — QuietHome</title>
+<meta name="description" content="Compare 50+ home products by noise level in decibels. Filter by category, sort by quietest. Air purifiers, fans, keyboards, blenders and more.">
+<link rel="canonical" href="https://humancronadmin.github.io/quiet-home/database.html">
+<meta property="og:title" content="QuietHome Product Database">
+<meta property="og:description" content="Compare home products by dB level. Find the quietest option in any category.">
+<meta name="twitter:card" content="summary">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container">
+<a href="index.html" class="nav-brand">Quiet<span>Home</span></a>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">&#9776;</button>
+<ul class="nav-links">
+<li><a href="database.html">Database</a></li>
+<li><a href="articles.html">Guides</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</div></nav>
+
+<section style="padding-top:32px"><div class="container">
+<h1 style="font-size:1.6rem;margin-bottom:8px">Noise Level Database</h1>
+<p style="color:#57534E;margin-bottom:20px">Every product compared by actual decibels. Filter, sort, find what's truly quiet.</p>
+
+<div class="filters">
+<input type="text" id="search-box" placeholder="Search products...">
+<select id="filter-category">
+<option value="">All Categories</option>
+<option value="air-purifier">Air Purifier</option>
+<option value="fan">Fan</option>
+<option value="keyboard">Keyboard</option>
+<option value="blender">Blender</option>
+<option value="dishwasher">Dishwasher</option>
+<option value="vacuum">Vacuum</option>
+<option value="ac">AC Unit</option>
+<option value="dehumidifier">Dehumidifier</option>
+<option value="other">Other</option>
+</select>
+<select id="filter-noise">
+<option value="">All Noise Levels</option>
+<option value="whisper">Whisper (&lt;30 dB)</option>
+<option value="quiet">Quiet (30-44 dB)</option>
+<option value="moderate">Moderate (45-60 dB)</option>
+<option value="noticeable">Loud (60+ dB)</option>
+</select>
+<select id="sort-by">
+<option value="quietest">Quietest First</option>
+<option value="loudest">Loudest First</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+</select>
+</div>
+
+<div class="product-count" id="result-count">Loading...</div>
+<div class="product-grid" id="product-grid"></div>
+</div></section>
+
+<footer class="footer"><div class="container">
+<div class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> Some links are affiliate links. We may earn a small commission at no extra cost to you.</div>
+<p>&copy; 2026 QuietHome</p>
+</div></footer>
+
+<script src="js/database.js"></script>
+</body>
+</html>
